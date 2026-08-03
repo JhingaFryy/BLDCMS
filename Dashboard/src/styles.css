@@ -1,0 +1,40 @@
+:root {
+  font-family: Inter, Roboto, Arial, sans-serif;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Module 33: color/background intentionally left to MuiCssBaseline + the theme's palette.mode -
+   hardcoding a light-only color/background here (the pre-redesign state) fought the dark theme,
+   showing a light flash/background wherever this stylesheet won before ThemeProvider applied. */
+* { box-sizing: border-box; }
+body { margin: 0; min-width: 320px; min-height: 100vh; }
+a { color: inherit; text-decoration: none; }
+#root { min-height: 100vh; }
+
+/* Module 33: shared keyframes for the shimmer/loading/fade-in animations used across
+   StatCard/SkeletonBlock/EmptyState/table rows - kept as plain CSS (not per-component
+   emotion `keyframes()` calls) so every consumer shares the same compiled animation instead of
+   duplicating it, and so they stay cheap, GPU-friendly transform/opacity/background-position
+   animations rather than anything that forces layout. */
+@keyframes cyberShimmer {
+  0% { background-position: -400px 0; }
+  100% { background-position: 400px 0; }
+}
+
+@keyframes cyberFadeInUp {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes cyberPulseGlow {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.55; }
+}
+
+@keyframes cyberFloat {
+  0%, 100% { transform: translate3d(0, 0, 0); }
+  50% { transform: translate3d(0, -14px, 0); }
+}

@@ -1,0 +1,9 @@
+node_modules
+
+# Module 45.5: build artifacts - regenerated via `npm run build`. Adding these here only affects
+# files not already tracked; it does not untrack dist/, which is currently committed AND is the
+# live production Nginx document root as of Module 45 (see Documentation/DEPLOYMENT.md) - whether
+# to stop tracking it in git is a separate decision left to the project owner, not made here.
+dist/
+.vite/
+*.tsbuildinfo

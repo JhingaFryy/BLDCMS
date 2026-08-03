@@ -1,7 +1,3 @@
-Designed and Developed by Electric Loco Shed, Valsad!!!
-
-Clone the repository or download it as Zip file and follow the steps mentioned as below!!!
-
 # BL-DCMS — Digital Checksheet Management System
 
 A digital replacement for paper checksheets used during electric locomotive maintenance at an

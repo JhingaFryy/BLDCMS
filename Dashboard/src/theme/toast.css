@@ -1,0 +1,50 @@
+/* Module 33: restyles react-toastify's default toast chrome to match the Cyber-Industrial
+   Command Center theme - glassy navy surface, glowing left accent bar per severity, slide-in
+   (configured via <ToastContainer transition={Slide}> in App.tsx) + the library's built-in
+   auto-dismiss progress bar. Only visual - react-toastify's own show/hide/dismiss behavior,
+   used by AuthContext and api/client.ts, is untouched. */
+
+:root {
+  --toastify-color-progress-success: #1fe08a;
+  --toastify-color-progress-error: #ff4d6a;
+  --toastify-color-progress-warning: #ffb020;
+  --toastify-color-progress-info: #22d3ee;
+}
+
+.Toastify__toast {
+  border-radius: 14px !important;
+  padding: 14px 16px !important;
+  font-family: 'Inter', 'Roboto', 'Segoe UI', Arial, sans-serif;
+  box-shadow: 0 12px 32px -8px rgba(0, 0, 0, 0.45) !important;
+}
+
+.Toastify__toast-theme--dark {
+  background: linear-gradient(160deg, rgba(18, 27, 48, 0.96) 0%, rgba(13, 21, 38, 0.98) 100%) !important;
+  border: 1px solid rgba(34, 49, 78, 0.9);
+  backdrop-filter: blur(6px);
+}
+
+.Toastify__toast-theme--light {
+  background: #ffffff !important;
+  border: 1px solid rgba(15, 28, 51, 0.1);
+}
+
+.Toastify__toast--success {
+  border-left: 3px solid #1fe08a !important;
+}
+
+.Toastify__toast--error {
+  border-left: 3px solid #ff4d6a !important;
+}
+
+.Toastify__toast--warning {
+  border-left: 3px solid #ffb020 !important;
+}
+
+.Toastify__toast--info {
+  border-left: 3px solid #22d3ee !important;
+}
+
+.Toastify__progress-bar {
+  height: 3px !important;
+}

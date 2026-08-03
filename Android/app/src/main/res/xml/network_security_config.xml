@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Preserves today's behavior (cleartext HTTP permitted everywhere, matching the app's current dev
+  backend at a plain-HTTP LAN address) but as a structured, documented config instead of a blanket
+  usesCleartextTraffic flag. Before a production release, switch the backend to HTTPS and replace
+  the base config below with a domain-config scoped to just that host - see RELEASE_CHECKLIST.md.
+-->
+<network-security-config>
+    <base-config cleartextTrafficPermitted="true">
+        <trust-anchors>
+            <certificates src="system" />
+        </trust-anchors>
+    </base-config>
+</network-security-config>

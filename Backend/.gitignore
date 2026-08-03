@@ -1,0 +1,30 @@
+# Module 45.5: this repo had no .gitignore at all, which meant runtime-generated and
+# environment-specific content (logs, backups, the venv, compiled bytecode) was sitting
+# untracked rather than deliberately excluded - a single `git add -A` away from being committed.
+
+# Python virtual environment - never portable across machines, always regenerated from
+# requirements.txt (see Documentation/INSTALLATION.md).
+venv/
+
+# Python bytecode cache - regenerated automatically on every run.
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# Runtime-generated data - backups, archives, and diagnostics bundles are all produced by
+# app/backup_system and app/admin_cli on demand (see Documentation/BACKUP_AND_RESTORE.md and
+# AUTOMATED_BACKUP_SYSTEM.md); none of it belongs in source control.
+logs/
+backups/
+archives/
+diagnostics/
+
+# Signed checksheet PDFs are real per-installation application data (referenced by
+# checksheet_header.pdf_path in the database), not source - never commit them.
+storage/pdfs/*
+!storage/pdfs/.gitkeep
+
+# Local-only credentials file some installs use alongside DATABASE_URL/JWT_SECRET_KEY
+# environment variables (see Documentation/DEPLOYMENT.md) - never commit secrets.
+.env
+.environ*

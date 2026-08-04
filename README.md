@@ -1,5 +1,5 @@
 # The Project is Design and Developed by Electric Loco Shed, Valsad. 
-This is and In-house project built for maintaining the Digital Records for Checksheets without Paper-hassle. It's a Zero(0) cost project, totally built with knowledge, skills and dedication. Also, It was not possible to bring this project to the table without the Guidance of our Hon' Sr. Divisional Electrical Engineer Shri R. C. Meena and Hon' Divisional Electical Engineer Shri Suresh Kumar. The Project was build and maintained by Mr. Jatinkumar Pardeshi, Tech-III and Mr. Neelkumar Patel, Tech-II.
+This is and In-house project built for maintaining the Digital Records for Checksheets without Paper-hassle. It's a Zero(0) cost project, totally built with knowledge, skills and dedication. Also, It was not possible to bring this project to the table without the Guidance of our Hon' Sr. Divisional Electrical Engineer Shri R. C. Meena and Hon' Divisional Electical Engineer Shri Suresh Kumar. The Project was build and maintained by [Mr. Jatinkumar Pardeshi](https://jhingafry.in/), Tech-III and Mr. Neelkumar Patel, Tech-II.
 
 # BL-DCMS — Digital Checksheet Management System
 

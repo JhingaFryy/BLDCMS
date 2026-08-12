@@ -15,19 +15,19 @@
 
 BEGIN;
 
-INSERT INTO system_settings (key, value) VALUES
-    ('company_name', 'YOUR_ORGANIZATION_NAME'),
-    ('default_workflow', 'DRAFT,SUBMITTED,UNDER_REVIEW,APPROVED'),
-    ('allow_draft_edit', 'true'),
-    ('email_notifications', 'false'),
-    ('pdf_logo', ''),
-    ('password_expiry_days', '90'),
-    ('session_timeout', '30'),
-    ('dsc.pkcs11_lib_path', ''),
-    ('dsc.pkcs11_token_label', ''),
-    ('dsc.pkcs11_cert_label', ''),
-    ('dsc.trusted_ca_bundle_path', ''),
-    ('dsc.enable_revocation_check', 'true')
+INSERT INTO system_settings (key, category, value) VALUES
+    ('company_name', 'General', 'YOUR_ORGANIZATION_NAME'),
+    ('default_workflow', 'Workflow', 'DRAFT,SUBMITTED,UNDER_REVIEW,APPROVED'),
+    ('allow_draft_edit', 'Workflow', 'true'),
+    ('email_notifications', 'Notifications', 'false'),
+    ('pdf_logo', 'PDF', ''),
+    ('password_expiry_days', 'Security', '90'),
+    ('session_timeout', 'Security', '30'),
+    ('dsc.pkcs11_lib_path', 'Digital Signature', ''),
+    ('dsc.pkcs11_token_label', 'Digital Signature', ''),
+    ('dsc.pkcs11_cert_label', 'Digital Signature', ''),
+    ('dsc.trusted_ca_bundle_path', 'Digital Signature', ''),
+    ('dsc.enable_revocation_check', 'Digital Signature', 'false')
 ON CONFLICT (key) DO NOTHING;
 
 -- Bootstrap Administrator.
